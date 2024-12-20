@@ -75,7 +75,7 @@ nav a{
   
     
 }
-.parent {
+/* .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -88,4 +88,92 @@ nav a{
     .two { grid-area: 1 / 3 / 3 / 5; }
     .three{ grid-area: 3 / 3 / 6 / 5; }
     .four{ grid-area: 1 / 5 / 3 / 6; }
-    .five { grid-area: 3 / 5 / 6 / 6; }
+    .five { grid-area: 3 / 5 / 6 / 6; } */
+
+    .grid-areas{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "sheapone seanolFavorite seanolFavorite"
+                             "sheapone picOne picTwo";
+       margin-top: 3em;
+       position: relative;
+    }
+
+    .sheapone{
+        grid-area: sheapone;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        filter: blur(0.08);
+      
+    }
+    .shopNow {
+        position: absolute;
+        bottom: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+      
+        padding: 0.8rem 2rem;
+        background-color: #007bff;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        
+    }
+    
+    
+  
+    .shopNow:hover {
+     
+       
+    }
+    .shopNow:hover ~ .sheapone img {
+        background-color: #0056b3; 
+        filter: blur(5px); 
+    }
+    
+    .sheapone img{
+        width: 100%; 
+        height: auto; 
+        border-radius: 5em !important;
+        object-fit: cover; 
+      
+    } 
+    .seanolFavorite{
+        grid-area: seanolFavorite;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .picOne{
+        grid-area: picOne;
+        object-fit: cover; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .picTwo{
+        grid-area: picTwo;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        object-fit: cover; 
+    }
+
+    @media (max-width: 768px) {
+        .grid-areas {
+            grid-template-columns: 1fr; 
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+                "sheapone"
+                "seanolFavorite"
+                "picOne"
+                "picTwo";
+        }
+    }
+    
