@@ -146,10 +146,13 @@ nav a{
         object-fit: contain;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         
       }
       .card:hover{
-        
+        transform: scale(1.03); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
       }
       .image_content img{
         overflow: hidden !important;
