@@ -127,6 +127,15 @@ nav a{
                 "picOne"
                 "picTwo";
         }
+        .banner-img {
+   
+          width: 100%;
+          height: auto; 
+          border-radius: 1em;
+    
+      
+  }
+  
     }
     
     .plant-cards {
