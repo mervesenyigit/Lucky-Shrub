@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dancing+Script&family=Homemade+Apple&family=Pacifico&display=swap" rel="stylesheet">
     <title>Lucky Shrub</title>
 </head>
 <body>
@@ -22,18 +24,32 @@
 
     </nav>
     <main>
-        <section>
+        <section class="banner_content">
             <div class="about">
                 <img src="img/plantt.jpg" alt="" class="banner-img">
+                
             </div>
+            <div class="pen_drawing">
+              <svg width="600" height="100" >
+                <!-- Metin için bir yol tanımlıyoruz -->
+                <path id="text-path" d="M50,50 L450,50" fill="none" stroke="none" />
+                <text>
+                  <textPath href="#text-path" class="animated-text" id="animated-text">
+                    A New Plant!
+                  </textPath>
+                </text>
+              </svg>
+          
+            </div>
+           
         </section>
         <section class="grid-areas">
       
                 <div class="sheapone">
                     <img src="img/house_plant.jpg" alt="">
-                    
+                    <button class="shopNow">Shop Now</button>
                 </div>
-                <!-- <button class="shopNow">Shop Now</button> -->
+               
                 <div class="seanolFavorite">
                     <img src="img/gift_plant_decor.jpg" alt="">
                 </div>
@@ -165,7 +181,9 @@
         </section>
     </main>
     <footer>
-
+      <p>&copy; 2024 Lucky Shrub - All Rights Reserved</p>
     </footer>
 </body>
+<script src="./app.js"></script>
+
 </html>

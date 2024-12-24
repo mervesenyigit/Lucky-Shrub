@@ -63,17 +63,74 @@ nav a{
     color: white;
 }
 .about {
+
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+  
 }
+
 .banner-img {
    
-        width: 100%;
-        height: 700px; 
-        border-radius: 5em;
+  width: 100%;
+  height: 700px; 
+  border-radius: 5em;  
+
+}
+.pen_drawing{
+
+  position: absolute;
+  bottom: 33%;
+  left: 39%;
+
+}
+
+.animated-text {
+  font-size: 4em;
+
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   
-    
+  stroke: #000;
+  stroke-width: 0.5px;
+  animation: move-text 5s linear infinite;
+}
+
+@keyframes move-text {
+  0% {
+    stroke-dasharray: 0, 100;
+    fill: transparent;
+  }
+  100% {
+    stroke-dasharray: 400, 0;
+    fill: black;
+  }
+}
+
+
+
+
+/**********************/
+.shopNow{
+  border: 0;
+  background-color: #BE8868;
+  color: #fff;
+  padding: 20px 20px;
+  border-radius: 2em;
+  font-size: 2em;
+  top: 50%; /* Kapsayıcının ortası */
+  left: 50%; /* Kapsayıcının ortası */
+  transform: translate(-50%, -50%); /* Gerçek ortalama */
+  z-index: 10; /* Butonun üstte görünmesi için */
+  position: absolute;
+}
+.shopNow:hover{
+  cursor:pointer;
+  background-color:#db9064;
+ 
 }
 
 .grid-areas {
@@ -83,17 +140,29 @@ nav a{
     gap: 2em; 
     margin-top: 2em;
 }
+.sheapone {
+  position: relative; 
+  width: 100%; 
+  height: auto; 
+  
+}
 
 .sheapone, .seanolFavorite, .picOne, .picTwo {
     background-color: #f1f0ee; 
     border-radius: 1em; 
 }
-
+.sheapone, .seanolFavorite, .picOne, .picTwo:hover{
+  filter: brightness(1);
+}
+.sheapone img{
+  filter: blur(3px);
+}
 .picOne img, .picTwo img, .sheapone img, .seanolFavorite img {
     width: 100%; 
     height: 100%; 
     object-fit: cover; /* Resim, kapsayıcıyı taşırmadan doldurur */
     border-radius: 4em !important; /* Resim köşe yuvarlatma */
+ 
 }
 .sheapone {
     grid-column: 1 / 4;
